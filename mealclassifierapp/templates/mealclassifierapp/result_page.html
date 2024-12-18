@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Classification Result</title>
+</head>
+<body>
+<h1>Meal Classification Result</h1>
+{% if prediction %}
+<p>Your meal is classified as: <strong>{{ prediction }}</strong></p>
+{% else %}
+<p>No prediction could be made. Please try again.</p>
+{% endif %}
+<a href="{% url 'form_page' %}">Classify another meal</a>
+</body>
+</html>

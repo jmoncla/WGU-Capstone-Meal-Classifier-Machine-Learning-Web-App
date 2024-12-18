@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meal Classifier</title>
+</head>
+<body>
+<h1>Welcome to the Meal Classifier</h1>
+<form action="{% url 'predict_meal' %}" method="post">
+  {% csrf_token %}
+  <label for="meal_input">Enter a meal description:</label><br>
+  <input type="text" id="meal_input" name="meal_input" required>
+  <br><br>
+  <button type="submit">Classify Meal</button>
+</form>
+</body>
+</html>
