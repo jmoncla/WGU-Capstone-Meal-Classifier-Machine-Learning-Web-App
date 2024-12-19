@@ -1,0 +1,5 @@
+-word usage chart for each category,,,, so which words are most used per category on the given data
+-average amount of words a user uses to describe a meal
+-average words used by category
+visuals
+dataset distribution,,,numbers of each  category the data was trained off of
