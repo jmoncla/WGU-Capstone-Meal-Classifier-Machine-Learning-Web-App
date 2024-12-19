@@ -25,7 +25,7 @@ model, vectorizer = train_model()
 
 # View for displaying the form page
 def form_page(request):
-    return render(request, '  mealclassifierapp/form_page.html')
+    return render(request, 'mealclassifierapp/form_page.html')
 
 # View for processing input and displaying prediction
 def predict_meal(request):
