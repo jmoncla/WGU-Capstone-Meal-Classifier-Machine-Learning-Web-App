@@ -25,7 +25,7 @@ model, vectorizer = train_model()
 
 # View for displaying the form page
 def form_page(request):
-    github_repo_url = "https://github.com/yourusername/your-repo-name"
+    github_repo_url =  "https://github.com/jmoncla/meal_classifier.git"
     return render(request, 'mealclassifierapp/form_page.html', {'github_repo_url': github_repo_url})
 
 # View for processing input and displaying prediction
