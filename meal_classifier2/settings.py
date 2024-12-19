@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'meal_classifier2.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/DBNAME')
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
 
@@ -123,9 +123,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # For dev only
-]
+WHITENOISE_AUTOREFRESH = True  # Auto-refresh static files in development mode
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
