@@ -1,12 +1,18 @@
+import os
+
 import pandas as pd
 from django.shortcuts import render
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
+from meal_classifier2.settings import BASE_DIR
+
+
 # Train the model and vectorizer once
 def train_model():
     # Read CSV file
-    data = pd.read_csv('meal_data.csv')  # Adjust path as needed
+    file_path = os.path.join(BASE_DIR, 'mealclassifierapp', 'data', 'meal_data.csv')
+    data = pd.read_csv(file_path)  # Adjust path as needed
     descriptions = data['description']
     labels = data['category']
 

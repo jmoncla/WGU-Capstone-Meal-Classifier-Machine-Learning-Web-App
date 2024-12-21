@@ -1,9 +1,14 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import CountVectorizer
 
+from meal_classifier2.settings import BASE_DIR
+from views import train_model
+
 # Load the data
-data = pd.read_csv('meal_data.csv')  # Adjust path as needed
+file_path = os.path.join(BASE_DIR, 'mealclassifierapp', 'data', 'testmodeldata2.csv')
+data = pd.read_csv(file_path)  # Adjust path as needed
 
 # Descriptive Method: Calculate accuracy (Example usage with testing split)
 def calculate_accuracy(model, vectorizer):
@@ -55,5 +60,5 @@ if __name__ == '__main__':
     accuracy = calculate_accuracy(model, vectorizer)
     print(f"Model Accuracy: {accuracy * 100:.2f}%")
 
-    generate_all_visuals()
-    print("Visuals generated and saved.")
+   # generate_all_visuals()
+   # print("Visuals generated and saved.")

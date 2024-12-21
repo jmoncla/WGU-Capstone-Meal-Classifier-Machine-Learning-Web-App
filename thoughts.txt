@@ -3,3 +3,11 @@
 -average words used by category
 visuals
 dataset distribution,,,numbers of each  category the data was trained off of
+
+redo the csv file to remove duplicates
+
+possibly can do mydf.describe which shows count, unique, top, freq, and name and then plot that info
+value counts normalize = true gives you a percentage
+ex. mydf['color'].value_counts(normalize=True) this would take the color column and count the values and sort by percentage descending
+
+remember to do accuracy score
