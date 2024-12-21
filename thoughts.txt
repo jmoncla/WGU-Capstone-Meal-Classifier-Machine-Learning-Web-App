@@ -11,3 +11,9 @@ value counts normalize = true gives you a percentage
 ex. mydf['color'].value_counts(normalize=True) this would take the color column and count the values and sort by percentage descending
 
 remember to do accuracy score
+
+
+run thropugh theory of each file again
+possibly needs to move the image files into static and collect static
+especiailly if I want to display the images as part of the website
+i think this is a good idea actuall

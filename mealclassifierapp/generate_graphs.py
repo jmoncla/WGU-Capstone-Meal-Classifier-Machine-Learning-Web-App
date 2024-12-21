@@ -94,5 +94,5 @@ if __name__ == '__main__':
     accuracy, y_pred = calculate_accuracy(model, vectorizer)
     print(f"Model Accuracy: {accuracy * 100:.2f}%")
 
-    generate_all_visuals(model, vectorizer)
-    print("Visuals generated and saved.")
+    #generate_all_visuals(model, vectorizer)
+    #print("Visuals generated and saved.")
