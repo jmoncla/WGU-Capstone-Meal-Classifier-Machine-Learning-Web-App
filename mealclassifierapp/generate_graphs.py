@@ -27,11 +27,16 @@ def generate_word_usage_chart():
     X = vectorizer.fit_transform(data['description'])
     word_counts = pd.DataFrame(X.toarray(), columns=vectorizer.get_feature_names_out())
     word_counts['category'] = data['category']
-    top_words = word_counts.groupby('category').sum().T
 
-    top_words.plot(kind='bar', figsize=(10, 6), title='Top Words by Category')
+    # Summing word frequencies by category
+    top_words = word_counts.groupby('category').sum()
+
+    # Plotting the bar chart
+    top_words.T.plot(kind='bar', figsize=(10, 6), title='Top Words by Category', stacked=False)
     plt.ylabel('Frequency')
     plt.savefig('word_usage_chart.png')
+    plt.close()  # Close the plot to avoid overlapping with other plots
+
 
 # Visual: Average Words Used by Category
 def generate_avg_words_chart():
@@ -41,12 +46,14 @@ def generate_avg_words_chart():
     avg_words.plot(kind='bar', color='skyblue', figsize=(8, 5), title='Average Words by Category')
     plt.ylabel('Average Word Count')
     plt.savefig('avg_words_chart.png')
+    plt.close()
 
 # Visual: Dataset Distribution
 def generate_dataset_distribution_chart():
     data['category'].value_counts().plot(kind='bar', color='coral', figsize=(8, 5), title='Dataset Distribution by Category')
     plt.ylabel('Number of Entries')
     plt.savefig('dataset_distribution_chart.png')
+    plt.close()
 
 # Generate all visuals
 def generate_all_visuals():
@@ -60,5 +67,5 @@ if __name__ == '__main__':
     accuracy = calculate_accuracy(model, vectorizer)
     print(f"Model Accuracy: {accuracy * 100:.2f}%")
 
-   # generate_all_visuals()
-   # print("Visuals generated and saved.")
+    generate_all_visuals()
+    print("Visuals generated and saved.")
