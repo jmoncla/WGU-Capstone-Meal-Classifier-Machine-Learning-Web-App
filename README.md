@@ -1,9 +1,9 @@
  Meal Classifier
 
 ## Overview
-This project is built with Django, and is hosted by Heroku and serves as a demonstration of a machine learning model that can process text input and return a classification. 
+This project is built with Django, and is hosted by Heroku, and serves as a demonstration of a machine learning model that can process text input and return a classification. 
 Below you will find the main application logic as well as the visuals that describe the test data.
-
+ 
 ---
 
 ## MAIN APPLICATION LOGIC
