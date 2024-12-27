@@ -34,6 +34,8 @@ model, vectorizer = train_model()
 
 To review the full application logic, visit the [main logic file](mealclassifierapp/views.py)
 
+The CSV data used to train the model as well as the CSV data used to test the accuracy of the model are contained in two separate files. Follow this link to view the [CSV Data Files](mealclassifierapp/data)
+
 ---
 
 ## VISUALS
