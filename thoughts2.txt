@@ -1,5 +1,0 @@
-use markdown to generate a read me that interactively takes you to the correct areas of code
-on the github i mean
-
-need to add the cover page for the documet and the table of contents
-
