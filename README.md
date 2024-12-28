@@ -8,7 +8,7 @@ Below you will find the main application logic as well as the visuals that descr
 
 ## MAIN APPLICATION LOGIC
 
-The main application logic involves training the model and vectorizing text data using the following key functions:
+The main application logic involves vectorizing the data and training the model with this function:
 
 ```python
 def train_model():
