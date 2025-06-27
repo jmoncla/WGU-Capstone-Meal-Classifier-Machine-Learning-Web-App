@@ -1,7 +1,8 @@
  Meal Classifier
 
 ## Overview
-This project is built with Django, and is hosted by Heroku, and serves as a demonstration of a machine learning model that can process text input and return a classification. 
+This project involved developing a machine learning model capable of predicting the classification of a meal (e.g., breakfast, lunch, or dinner) based on a user-provided description of various food items. The application was built using Django, hosted on Heroku, and utilized popular Python data packages such as pandas, scikit-learn, and matplotlib. By deploying to Heroku, the web app could be accessed via a browser-based frontend, allowing evaluators to simply enter a food description into a text box and receive the predicted meal classification.
+
 Below you will find the main application logic as well as the visuals that describe the test data.
  
 ---
